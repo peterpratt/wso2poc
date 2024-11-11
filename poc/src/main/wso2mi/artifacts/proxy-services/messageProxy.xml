@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="messageProxy" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+            <property name="messageType" value="application/json" scope="axis2"/>
+            <log level="custom">
+                <property name="message" value="I am logging hte message"/>
+            </log>
+        </inSequence>
+        <outSequence>
+            <property name="FORCE_SC_ACCEPTED" scope="axis2" type="STRING" value="true"/>
+            <respond/>
+        </outSequence>
+        <faultSequence/>
+    </target>
+</proxy>
