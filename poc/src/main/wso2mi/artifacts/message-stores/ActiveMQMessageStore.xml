@@ -1,0 +1,10 @@
+<messageStore xmlns="http://ws.apache.org/ns/synapse" name="ActiveMQMessageStore" class="org.apache.synapse.message.store.impl.jms.JmsStore">
+    <parameter name="store.jms.connection.factory">QueueConnectionFactory</parameter>
+    <parameter name="store.producer.guaranteed.delivery.enable">false</parameter>
+    <parameter name="store.jms.cache.connection">false</parameter>
+    <parameter name="java.naming.factory.initial">org.apache.activemq.jndi.ActiveMQInitialContextFactory</parameter>
+    <parameter name="java.naming.provider.url">$SYSTEM:JMS_PROVIDER_URL</parameter>
+    <parameter name="store.jms.username">admin</parameter>
+    <parameter name="store.jms.password">admin</parameter>
+    <parameter name="store.jms.JMSSpecVersion">1.1</parameter>
+</messageStore>

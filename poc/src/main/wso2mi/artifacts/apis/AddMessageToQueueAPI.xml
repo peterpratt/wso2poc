@@ -1,0 +1,9 @@
+<api xmlns="http://ws.apache.org/ns/synapse" name="AddMessageToQueueAPI" context="/addMessage">
+    <resource methods="POST" uri-template="/toQueue">
+        <inSequence>
+            <property name="OUT_ONLY" value="true" scope="default" type="STRING"/>
+            <property name="messageType" value="application/json" scope="axis2"/>
+            <store messageStore="ActiveMQMessageStore"/>
+        </inSequence>
+    </resource>
+</api>
