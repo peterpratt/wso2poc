@@ -4,6 +4,7 @@
             <property name="OUT_ONLY" value="true" scope="default" type="STRING"/>
             <property name="messageType" value="application/json" scope="axis2"/>
             <store messageStore="ActiveMQMessageStore"/>
+            <respond/>
         </inSequence>
     </resource>
 </api>
